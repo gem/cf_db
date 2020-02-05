@@ -12,8 +12,6 @@ jobs:
      - flake8 ./python/
   - stage: test
     env: POSTGRES
-    before_install:
-     - sudo apt -y remove postgresql-9.3 postgresql-client-9.3
     addons:
       postgresql: 11
       apt:
@@ -24,6 +22,7 @@ jobs:
      - echo "\set ON_ERROR_STOP on" > ~/.psqlrc
      - sudo pg_ctlcluster 11 main start
      - sudo pg_ctlcluster 11 main status
+	 - sudo cat /etc/postgresql/11/main/postgresql.conf
     script:
      - cd sql; sed -e 's/@DB_USER@/postgres/' db_settings.sh.template > db_settings.sh; 
      - cat db_settings.sh
