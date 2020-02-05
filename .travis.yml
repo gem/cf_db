@@ -13,7 +13,7 @@ jobs:
   - stage: test
     env: POSTGRES
     before_install:
-     - apt -y remove postgresql-9.3 postgresql-client-9.3
+     - sudo apt -y remove postgresql-9.3 postgresql-client-9.3
     addons:
       postgresql: 11
       apt:
@@ -22,7 +22,7 @@ jobs:
 
     before_script:
      - echo "\set ON_ERROR_STOP on" > ~/.psqlrc
-     - pg_ctlcluster 11 main start
+     - sudo pg_ctlcluster 11 main start
     script:
      - cd sql; sed -e 's/@DB_USER@/postgres/' db_settings.sh.template > db_settings.sh; POSTGRES_USER=postgres ./create-db.sh && ./create-users.sh 
      - psql -U postgres cf -f 00-common-schema.sql
