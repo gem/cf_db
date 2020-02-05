@@ -26,12 +26,13 @@ jobs:
     script:
      - cd sql; sed -e 's/@DB_USER@/postgres/' db_settings.sh.template > db_settings.sh; 
      - cat db_settings.sh
-     - ./create-db.sh 
-     - ./create-users.sh 
-     - psql -U postgres cf -f 00-common-schema.sql
-     - psql -U postgres cf -f 01-taxonomy2human.sql
-     - psql -U postgres cf -f 02-hazard-schema.sql
-     - psql -U postgres cf -f 03-ged4all-schema.sql
-     - psql -U postgres cf -f 04-loss-schema.sql
-     - psql -U postgres cf -f 05-mover-schema.sql
-     - psql -U postgres cf -f 06-permisions.sql
+     - POSTGRES_USER=postgres createdb -w -U postgres -p 5433 -h localhost cf
+     - psql -w -U postgres -p 5433 -h localhost cf -e "CR"
+     - psql -w -U postgres -p 5433 -h localhost cf -f create-users.sql
+     - psql -w -U postgres -p 5433 -h localhost cf -f 00-common-schema.sql
+     - psql -w -U postgres -p 5433 -h localhost cf -f 01-taxonomy2human.sql
+     - psql -w -U postgres -p 5433 -h localhost cf -f 02-hazard-schema.sql
+     - psql -w -U postgres -p 5433 -h localhost cf -f 03-ged4all-schema.sql
+     - psql -w -U postgres -p 5433 -h localhost cf -f 04-loss-schema.sql
+     - psql -w -U postgres -p 5433 -h localhost cf -f 05-mover-schema.sql
+     - psql -w -U postgres -p 5433 -h localhost cf -f 06-permisions.sql
