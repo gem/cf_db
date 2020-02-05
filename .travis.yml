@@ -23,8 +23,12 @@ jobs:
     before_script:
      - echo "\set ON_ERROR_STOP on" > ~/.psqlrc
      - sudo pg_ctlcluster 11 main start
+     - sudo pg_ctlcluster 11 main status
     script:
-     - cd sql; sed -e 's/@DB_USER@/postgres/' db_settings.sh.template > db_settings.sh; POSTGRES_USER=postgres ./create-db.sh && ./create-users.sh 
+     - cd sql; sed -e 's/@DB_USER@/postgres/' db_settings.sh.template > db_settings.sh; 
+     - cat db_settings.sh
+     - ./create-db.sh 
+     - ./create-users.sh 
      - psql -U postgres cf -f 00-common-schema.sql
      - psql -U postgres cf -f 01-taxonomy2human.sql
      - psql -U postgres cf -f 02-hazard-schema.sql
