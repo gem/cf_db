@@ -1,0 +1,31 @@
+dist: bionic
+language: python
+
+jobs:
+  include:
+  - stage: test
+    env: PYTHON3
+    python: 3.6
+    install:
+     - pip -q install -U flake8
+    script:
+     - flake8 ./python/
+  - stage: test
+    env: POSTGRES
+    addons:
+      postgresql: 11
+      apt:
+        packages:
+        - postgresql-11-postgis-2.5
+    
+    before_script:
+     - echo "\set ON_ERROR_STOP on" > ~/.psqlrc
+    script:
+     - cd sql; sed -e 's/@DB_USER@/postgres/' db_settings.sh.template > db_settings.sh; POSTGRES_USER=postgres ./create-db.sh && ./create-users.sh 
+     - psql -U postgres cf -f 00-common-schema.sql
+     - psql -U postgres cf -f 01-taxonomy2human.sql
+     - psql -U postgres cf -f 02-hazard-schema.sql
+     - psql -U postgres cf -f 03-ged4all-schema.sql
+     - psql -U postgres cf -f 04-loss-schema.sql
+     - psql -U postgres cf -f 05-mover-schema.sql
+     - psql -U postgres cf -f 06-permisions.sql
