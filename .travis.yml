@@ -8,6 +8,7 @@ jobs:
     python: 3.6
     install:
      - pip -q install -U flake8
+     - sudo service postgresql stop
     script:
      - flake8 ./python/
   - stage: test
@@ -17,15 +18,31 @@ jobs:
       apt:
         packages:
         - postgresql-11-postgis-2.5
-    
+        - postgresql-11
+        - postgresql-client-11
+      global:
+        - PGPORT=5433
+
     before_script:
+     - export PATH="/usr/lib/postgresql/11/bin:$PATH"
      - echo "\set ON_ERROR_STOP on" > ~/.psqlrc
+     - sudo cp /etc/postgresql/9.3/main/pg_hba.conf /etc/postgresql/11/main/pg_hba.conf || (echo "Failed to copy pg_hba.conf, struggling on..." ; true)
+     - sudo cat /etc/postgresql/11/main/pg_hba.conf
+     - sudo cat /etc/postgresql/9.3/main/pg_hba.conf
+     - sudo pg_ctlcluster 11 main restart
+     - sudo pg_ctlcluster 11 main status
     script:
-     - cd sql; sed -e 's/@DB_USER@/postgres/' db_settings.sh.template > db_settings.sh; POSTGRES_USER=postgres ./create-db.sh && ./create-users.sh 
-     - psql -U postgres cf -f 00-common-schema.sql
-     - psql -U postgres cf -f 01-taxonomy2human.sql
-     - psql -U postgres cf -f 02-hazard-schema.sql
-     - psql -U postgres cf -f 03-ged4all-schema.sql
-     - psql -U postgres cf -f 04-loss-schema.sql
-     - psql -U postgres cf -f 05-mover-schema.sql
-     - psql -U postgres cf -f 06-permisions.sql
+     - id
+     - cd sql; 
+     - sed -e 's/@DB_USER@/postgres/' db_settings.sh.template > db_settings.sh; 
+     - cat db_settings.sh
+     - createdb -w -p 5433 -h localhost cf
+     - psql -w  -p 5433  -h localhost -d cf -c "create extension postgis;"
+     - psql -w  -p 5433  -h localhost -d cf -f create-users.sql
+     - psql -w  -p 5433  -h localhost -d cf -f 00-common-schema.sql
+     - echo "Ommitting - need plpython3u - psql -w  -p 5433  -h localhost -d cf -f 01-taxonomy2human.sql"
+     - psql -w  -p 5433  -h localhost -d cf -f 02-hazard-schema.sql
+     - psql -w  -p 5433  -h localhost -d cf -f 03-ged4all-schema.sql
+     - psql -w  -p 5433  -h localhost -d cf -f 04-loss-schema.sql
+     - psql -w  -p 5433  -h localhost -d cf -f 05-mover-schema.sql
+     - psql -w  -p 5433  -h localhost -d cf -f 06-permissions.sql
