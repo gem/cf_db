@@ -45,4 +45,4 @@ jobs:
      - psql -w  -p 5433  -h localhost -d cf -f 03-ged4all-schema.sql
      - psql -w  -p 5433  -h localhost -d cf -f 04-loss-schema.sql
      - psql -w  -p 5433  -h localhost -d cf -f 05-mover-schema.sql
-     - psql -w  -p 5433  -h localhost -d cf -f 06-permisions.sql
+     - psql -w  -p 5433  -h localhost -d cf -f 06-permissions.sql
