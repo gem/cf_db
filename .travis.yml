@@ -8,6 +8,7 @@ jobs:
     python: 3.6
     install:
      - pip -q install -U flake8
+     - sudo service postgresql stop
     script:
      - flake8 ./python/
   - stage: test
@@ -19,21 +20,22 @@ jobs:
         - postgresql-11-postgis-2.5
         - postgresql-11
         - postgresql-11-client
-	env:
-	  global:
-	  - PGPORT=5433
+    env:
+      global:
+        - PGPORT=5433
 
     before_script:
+     - export PATH="/usr/lib/postgresql/11/bin:$PATH"
      - echo "\set ON_ERROR_STOP on" > ~/.psqlrc
-     - sudo pg_ctlcluster 11 main start
-     - sudo pg_ctlcluster 11 main status
      - sudo cat /etc/postgresql/11/main/postgresql.conf
      - sudo echo "host    all             all             127.0.0.1/32            md5" >> /etc/postgresql/11/main/pg_hba.conf
      - sudo cat /etc/postgresql/11/main/pg_hba.conf
      - sudo cat /etc/postgresql/9.3/main/postgresql.conf
      - sudo cat /etc/postgresql/9.3/main/pg_hba.conf
-     - export PATH="/usr/lib/postgresql/11/bin:$PATH"
-     - psql -c 'CREATE ROLE travis SUPERUSER LOGIN CREATEDB;' -U postgres
+     - sudo service postgresql restart 11
+     - sudo pg_ctlcluster 11 main start
+     - sudo pg_ctlcluster 11 main status
+     - sudo psql -w -p 5433 -c 'CREATE ROLE travis SUPERUSER LOGIN CREATEDB;' -U postgres
     script:
      - id
      - cd sql; 
