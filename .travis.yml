@@ -26,14 +26,12 @@ jobs:
     before_script:
      - export PATH="/usr/lib/postgresql/11/bin:$PATH"
      - echo "\set ON_ERROR_STOP on" > ~/.psqlrc
-     - sudo cat /etc/postgresql/11/main/postgresql.conf
+     - sudo cp /etc/postgresql/9.3/main/pg_hba.conf /etc/postgresql/11/main/pg_hba.conf || (echo "Failed to copy pg_hba.conf, struggling on..." ; true)
      - sudo cat /etc/postgresql/11/main/pg_hba.conf
-     - sudo cat /etc/postgresql/9.3/main/postgresql.conf
      - sudo cat /etc/postgresql/9.3/main/pg_hba.conf
-     - sudo service postgresql restart 11
-     - sudo pg_ctlcluster 11 main start
+     - sudo pg_ctlcluster 11 main restart
      - sudo pg_ctlcluster 11 main status
-     - sudo psql -w -p 5433 -c 'CREATE ROLE travis SUPERUSER LOGIN CREATEDB;' -U postgres
+     - sudo -u postgres psql -w -p 5433 -c 'CREATE ROLE travis SUPERUSER LOGIN CREATEDB;' 
     script:
      - id
      - cd sql; 
