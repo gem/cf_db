@@ -1,0 +1,22 @@
+db_confs = {
+    'ged4all_reader': {
+        'NAME': 'ged4all',
+        'USER': '<username for export here>',
+        'PASSWORD': '<password here>',
+        'HOST': '<hostname>',
+        'PORT': 5432,
+        'OPTIONS': {
+            'sslmode': 'require',
+        }
+    },
+    'ged4all_contrib': {
+        'NAME': 'ged4all',
+        'USER': '<username for contributions here>',
+        'PASSWORD': '<password here>',
+        'HOST': '<hostname>',
+        'PORT': 5432,
+        'OPTIONS': {
+            'sslmode': 'require',
+        }
+    }
+}

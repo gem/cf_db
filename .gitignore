@@ -105,3 +105,6 @@ venv.bak/
 
 #
 db_settings.sh
+db_settings.py
+db_settings.py.pg9
+db_settings.py.pg11
