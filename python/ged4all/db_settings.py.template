@@ -1,5 +1,5 @@
 db_confs = {
-    'geddb': {
+    'ged4all_reader': {
         'NAME': 'ged4all',
         'USER': '<username for export here>',
         'PASSWORD': '<password here>',
@@ -9,7 +9,7 @@ db_confs = {
             'sslmode': 'require',
         }
     },
-    'gedcontrib': {
+    'ged4all_contrib': {
         'NAME': 'ged4all',
         'USER': '<username for contributions here>',
         'PASSWORD': '<password here>',

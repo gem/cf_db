@@ -218,7 +218,7 @@ def exposure_to_nrml(model_id):
     """
     connections = db_connections(db_settings.db_confs)
 
-    with connections['geddb'].cursor() as cursor:
+    with connections['ged4all_contrib'].cursor() as cursor:
         cursor.execute(MODEL_QUERY, [model_id])
         model_dict = dictfetchone(cursor)
         if model_dict is None:
