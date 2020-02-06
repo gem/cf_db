@@ -17,16 +17,14 @@ SET client_min_messages = warning;
 SET row_security = off;
 
 --
--- Name: mover; Type: SCHEMA; Schema: -; Owner: gedcf
+-- Name: mover; Type: SCHEMA; Schema: -; Owner: -
 --
 
 CREATE SCHEMA mover;
 
 
-ALTER SCHEMA mover OWNER TO gedcf;
-
 --
--- Name: an_analysis_type_enum; Type: TYPE; Schema: mover; Owner: gedcf
+-- Name: an_analysis_type_enum; Type: TYPE; Schema: mover; Owner: -
 --
 
 CREATE TYPE mover.an_analysis_type_enum AS ENUM (
@@ -36,10 +34,8 @@ CREATE TYPE mover.an_analysis_type_enum AS ENUM (
 );
 
 
-ALTER TYPE mover.an_analysis_type_enum OWNER TO gedcf;
-
 --
--- Name: damage_states_all_enum; Type: TYPE; Schema: mover; Owner: gedcf
+-- Name: damage_states_all_enum; Type: TYPE; Schema: mover; Owner: -
 --
 
 CREATE TYPE mover.damage_states_all_enum AS ENUM (
@@ -78,10 +74,8 @@ CREATE TYPE mover.damage_states_all_enum AS ENUM (
 );
 
 
-ALTER TYPE mover.damage_states_all_enum OWNER TO gedcf;
-
 --
--- Name: dm_scale_ty_enum; Type: TYPE; Schema: mover; Owner: gedcf
+-- Name: dm_scale_ty_enum; Type: TYPE; Schema: mover; Owner: -
 --
 
 CREATE TYPE mover.dm_scale_ty_enum AS ENUM (
@@ -91,10 +85,8 @@ CREATE TYPE mover.dm_scale_ty_enum AS ENUM (
 );
 
 
-ALTER TYPE mover.dm_scale_ty_enum OWNER TO gedcf;
-
 --
--- Name: em_analysis_type_enum; Type: TYPE; Schema: mover; Owner: gedcf
+-- Name: em_analysis_type_enum; Type: TYPE; Schema: mover; Owner: -
 --
 
 CREATE TYPE mover.em_analysis_type_enum AS ENUM (
@@ -105,10 +97,8 @@ CREATE TYPE mover.em_analysis_type_enum AS ENUM (
 );
 
 
-ALTER TYPE mover.em_analysis_type_enum OWNER TO gedcf;
-
 --
--- Name: f_math_enum; Type: TYPE; Schema: mover; Owner: gedcf
+-- Name: f_math_enum; Type: TYPE; Schema: mover; Owner: -
 --
 
 CREATE TYPE mover.f_math_enum AS ENUM (
@@ -118,10 +108,8 @@ CREATE TYPE mover.f_math_enum AS ENUM (
 );
 
 
-ALTER TYPE mover.f_math_enum OWNER TO gedcf;
-
 --
--- Name: f_mathtype_enum; Type: TYPE; Schema: mover; Owner: gedcf
+-- Name: f_mathtype_enum; Type: TYPE; Schema: mover; Owner: -
 --
 
 CREATE TYPE mover.f_mathtype_enum AS ENUM (
@@ -138,10 +126,8 @@ CREATE TYPE mover.f_mathtype_enum AS ENUM (
 );
 
 
-ALTER TYPE mover.f_mathtype_enum OWNER TO gedcf;
-
 --
--- Name: f_relationship_enum; Type: TYPE; Schema: mover; Owner: gedcf
+-- Name: f_relationship_enum; Type: TYPE; Schema: mover; Owner: -
 --
 
 CREATE TYPE mover.f_relationship_enum AS ENUM (
@@ -150,10 +136,8 @@ CREATE TYPE mover.f_relationship_enum AS ENUM (
 );
 
 
-ALTER TYPE mover.f_relationship_enum OWNER TO gedcf;
-
 --
--- Name: f_subtype_enum; Type: TYPE; Schema: mover; Owner: gedcf
+-- Name: f_subtype_enum; Type: TYPE; Schema: mover; Owner: -
 --
 
 CREATE TYPE mover.f_subtype_enum AS ENUM (
@@ -168,10 +152,8 @@ CREATE TYPE mover.f_subtype_enum AS ENUM (
 );
 
 
-ALTER TYPE mover.f_subtype_enum OWNER TO gedcf;
-
 --
--- Name: fit_ref_enum; Type: TYPE; Schema: mover; Owner: gedcf
+-- Name: fit_ref_enum; Type: TYPE; Schema: mover; Owner: -
 --
 
 CREATE TYPE mover.fit_ref_enum AS ENUM (
@@ -181,10 +163,8 @@ CREATE TYPE mover.fit_ref_enum AS ENUM (
 );
 
 
-ALTER TYPE mover.fit_ref_enum OWNER TO gedcf;
-
 --
--- Name: function_type_enum; Type: TYPE; Schema: mover; Owner: gedcf
+-- Name: function_type_enum; Type: TYPE; Schema: mover; Owner: -
 --
 
 CREATE TYPE mover.function_type_enum AS ENUM (
@@ -194,10 +174,8 @@ CREATE TYPE mover.function_type_enum AS ENUM (
 );
 
 
-ALTER TYPE mover.function_type_enum OWNER TO gedcf;
-
 --
--- Name: geographic_relevance_score_enum; Type: TYPE; Schema: mover; Owner: gedcf
+-- Name: geographic_relevance_score_enum; Type: TYPE; Schema: mover; Owner: -
 --
 
 CREATE TYPE mover.geographic_relevance_score_enum AS ENUM (
@@ -208,10 +186,8 @@ CREATE TYPE mover.geographic_relevance_score_enum AS ENUM (
 );
 
 
-ALTER TYPE mover.geographic_relevance_score_enum OWNER TO gedcf;
-
 --
--- Name: im_method_enum; Type: TYPE; Schema: mover; Owner: gedcf
+-- Name: im_method_enum; Type: TYPE; Schema: mover; Owner: -
 --
 
 CREATE TYPE mover.im_method_enum AS ENUM (
@@ -222,10 +198,8 @@ CREATE TYPE mover.im_method_enum AS ENUM (
 );
 
 
-ALTER TYPE mover.im_method_enum OWNER TO gedcf;
-
 --
--- Name: jd_analysis_type_enum; Type: TYPE; Schema: mover; Owner: gedcf
+-- Name: jd_analysis_type_enum; Type: TYPE; Schema: mover; Owner: -
 --
 
 CREATE TYPE mover.jd_analysis_type_enum AS ENUM (
@@ -235,10 +209,8 @@ CREATE TYPE mover.jd_analysis_type_enum AS ENUM (
 );
 
 
-ALTER TYPE mover.jd_analysis_type_enum OWNER TO gedcf;
-
 --
--- Name: nonsampling_err_enum; Type: TYPE; Schema: mover; Owner: gedcf
+-- Name: nonsampling_err_enum; Type: TYPE; Schema: mover; Owner: -
 --
 
 CREATE TYPE mover.nonsampling_err_enum AS ENUM (
@@ -248,10 +220,8 @@ CREATE TYPE mover.nonsampling_err_enum AS ENUM (
 );
 
 
-ALTER TYPE mover.nonsampling_err_enum OWNER TO gedcf;
-
 --
--- Name: sample_enum; Type: TYPE; Schema: mover; Owner: gedcf
+-- Name: sample_enum; Type: TYPE; Schema: mover; Owner: -
 --
 
 CREATE TYPE mover.sample_enum AS ENUM (
@@ -261,10 +231,8 @@ CREATE TYPE mover.sample_enum AS ENUM (
 );
 
 
-ALTER TYPE mover.sample_enum OWNER TO gedcf;
-
 --
--- Name: scale_app_enum; Type: TYPE; Schema: mover; Owner: gedcf
+-- Name: scale_app_enum; Type: TYPE; Schema: mover; Owner: -
 --
 
 CREATE TYPE mover.scale_app_enum AS ENUM (
@@ -275,10 +243,8 @@ CREATE TYPE mover.scale_app_enum AS ENUM (
 );
 
 
-ALTER TYPE mover.scale_app_enum OWNER TO gedcf;
-
 --
--- Name: sim_method_enum; Type: TYPE; Schema: mover; Owner: gedcf
+-- Name: sim_method_enum; Type: TYPE; Schema: mover; Owner: -
 --
 
 CREATE TYPE mover.sim_method_enum AS ENUM (
@@ -287,10 +253,8 @@ CREATE TYPE mover.sim_method_enum AS ENUM (
 );
 
 
-ALTER TYPE mover.sim_method_enum OWNER TO gedcf;
-
 --
--- Name: type_nonsampling_err_enum; Type: TYPE; Schema: mover; Owner: gedcf
+-- Name: type_nonsampling_err_enum; Type: TYPE; Schema: mover; Owner: -
 --
 
 CREATE TYPE mover.type_nonsampling_err_enum AS ENUM (
@@ -301,14 +265,12 @@ CREATE TYPE mover.type_nonsampling_err_enum AS ENUM (
 );
 
 
-ALTER TYPE mover.type_nonsampling_err_enum OWNER TO gedcf;
-
 SET default_tablespace = '';
 
 SET default_with_oids = false;
 
 --
--- Name: damage_scale; Type: TABLE; Schema: mover; Owner: gedcf
+-- Name: damage_scale; Type: TABLE; Schema: mover; Owner: -
 --
 
 CREATE TABLE mover.damage_scale (
@@ -334,10 +296,8 @@ CREATE TABLE mover.damage_scale (
 );
 
 
-ALTER TABLE mover.damage_scale OWNER TO gedcf;
-
 --
--- Name: damage_scale_id_seq; Type: SEQUENCE; Schema: mover; Owner: gedcf
+-- Name: damage_scale_id_seq; Type: SEQUENCE; Schema: mover; Owner: -
 --
 
 CREATE SEQUENCE mover.damage_scale_id_seq
@@ -349,17 +309,15 @@ CREATE SEQUENCE mover.damage_scale_id_seq
     CACHE 1;
 
 
-ALTER TABLE mover.damage_scale_id_seq OWNER TO gedcf;
-
 --
--- Name: damage_scale_id_seq; Type: SEQUENCE OWNED BY; Schema: mover; Owner: gedcf
+-- Name: damage_scale_id_seq; Type: SEQUENCE OWNED BY; Schema: mover; Owner: -
 --
 
 ALTER SEQUENCE mover.damage_scale_id_seq OWNED BY mover.damage_scale.id;
 
 
 --
--- Name: edp_table; Type: TABLE; Schema: mover; Owner: gedcf
+-- Name: edp_table; Type: TABLE; Schema: mover; Owner: -
 --
 
 CREATE TABLE mover.edp_table (
@@ -370,10 +328,8 @@ CREATE TABLE mover.edp_table (
 );
 
 
-ALTER TABLE mover.edp_table OWNER TO gedcf;
-
 --
--- Name: f_additional; Type: TABLE; Schema: mover; Owner: gedcf
+-- Name: f_additional; Type: TABLE; Schema: mover; Owner: -
 --
 
 CREATE TABLE mover.f_additional (
@@ -396,10 +352,8 @@ CREATE TABLE mover.f_additional (
 );
 
 
-ALTER TABLE mover.f_additional OWNER TO gedcf;
-
 --
--- Name: f_additional_f_additional_id_seq; Type: SEQUENCE; Schema: mover; Owner: gedcf
+-- Name: f_additional_f_additional_id_seq; Type: SEQUENCE; Schema: mover; Owner: -
 --
 
 CREATE SEQUENCE mover.f_additional_f_additional_id_seq
@@ -411,17 +365,15 @@ CREATE SEQUENCE mover.f_additional_f_additional_id_seq
     CACHE 1;
 
 
-ALTER TABLE mover.f_additional_f_additional_id_seq OWNER TO gedcf;
-
 --
--- Name: f_additional_f_additional_id_seq; Type: SEQUENCE OWNED BY; Schema: mover; Owner: gedcf
+-- Name: f_additional_f_additional_id_seq; Type: SEQUENCE OWNED BY; Schema: mover; Owner: -
 --
 
 ALTER SEQUENCE mover.f_additional_f_additional_id_seq OWNED BY mover.f_additional.f_additional_id;
 
 
 --
--- Name: f_core; Type: TABLE; Schema: mover; Owner: gedcf
+-- Name: f_core; Type: TABLE; Schema: mover; Owner: -
 --
 
 CREATE TABLE mover.f_core (
@@ -451,10 +403,8 @@ CREATE TABLE mover.f_core (
 );
 
 
-ALTER TABLE mover.f_core OWNER TO gedcf;
-
 --
--- Name: f_core_id_seq; Type: SEQUENCE; Schema: mover; Owner: gedcf
+-- Name: f_core_id_seq; Type: SEQUENCE; Schema: mover; Owner: -
 --
 
 CREATE SEQUENCE mover.f_core_id_seq
@@ -466,17 +416,15 @@ CREATE SEQUENCE mover.f_core_id_seq
     CACHE 1;
 
 
-ALTER TABLE mover.f_core_id_seq OWNER TO gedcf;
-
 --
--- Name: f_core_id_seq; Type: SEQUENCE OWNED BY; Schema: mover; Owner: gedcf
+-- Name: f_core_id_seq; Type: SEQUENCE OWNED BY; Schema: mover; Owner: -
 --
 
 ALTER SEQUENCE mover.f_core_id_seq OWNED BY mover.f_core.id;
 
 
 --
--- Name: f_scoring; Type: TABLE; Schema: mover; Owner: gedcf
+-- Name: f_scoring; Type: TABLE; Schema: mover; Owner: -
 --
 
 CREATE TABLE mover.f_scoring (
@@ -487,10 +435,8 @@ CREATE TABLE mover.f_scoring (
 );
 
 
-ALTER TABLE mover.f_scoring OWNER TO gedcf;
-
 --
--- Name: f_scoring_f_core_id_seq; Type: SEQUENCE; Schema: mover; Owner: gedcf
+-- Name: f_scoring_f_core_id_seq; Type: SEQUENCE; Schema: mover; Owner: -
 --
 
 CREATE SEQUENCE mover.f_scoring_f_core_id_seq
@@ -502,17 +448,15 @@ CREATE SEQUENCE mover.f_scoring_f_core_id_seq
     CACHE 1;
 
 
-ALTER TABLE mover.f_scoring_f_core_id_seq OWNER TO gedcf;
-
 --
--- Name: f_scoring_f_core_id_seq; Type: SEQUENCE OWNED BY; Schema: mover; Owner: gedcf
+-- Name: f_scoring_f_core_id_seq; Type: SEQUENCE OWNED BY; Schema: mover; Owner: -
 --
 
 ALTER SEQUENCE mover.f_scoring_f_core_id_seq OWNED BY mover.f_scoring.f_core_id;
 
 
 --
--- Name: f_scoring_id_seq; Type: SEQUENCE; Schema: mover; Owner: gedcf
+-- Name: f_scoring_id_seq; Type: SEQUENCE; Schema: mover; Owner: -
 --
 
 CREATE SEQUENCE mover.f_scoring_id_seq
@@ -524,17 +468,15 @@ CREATE SEQUENCE mover.f_scoring_id_seq
     CACHE 1;
 
 
-ALTER TABLE mover.f_scoring_id_seq OWNER TO gedcf;
-
 --
--- Name: f_scoring_id_seq; Type: SEQUENCE OWNED BY; Schema: mover; Owner: gedcf
+-- Name: f_scoring_id_seq; Type: SEQUENCE OWNED BY; Schema: mover; Owner: -
 --
 
 ALTER SEQUENCE mover.f_scoring_id_seq OWNED BY mover.f_scoring.id;
 
 
 --
--- Name: f_specifics; Type: TABLE; Schema: mover; Owner: gedcf
+-- Name: f_specifics; Type: TABLE; Schema: mover; Owner: -
 --
 
 CREATE TABLE mover.f_specifics (
@@ -569,10 +511,8 @@ CREATE TABLE mover.f_specifics (
 );
 
 
-ALTER TABLE mover.f_specifics OWNER TO gedcf;
-
 --
--- Name: f_specifics_f_specifics_id_seq; Type: SEQUENCE; Schema: mover; Owner: gedcf
+-- Name: f_specifics_f_specifics_id_seq; Type: SEQUENCE; Schema: mover; Owner: -
 --
 
 CREATE SEQUENCE mover.f_specifics_f_specifics_id_seq
@@ -584,17 +524,15 @@ CREATE SEQUENCE mover.f_specifics_f_specifics_id_seq
     CACHE 1;
 
 
-ALTER TABLE mover.f_specifics_f_specifics_id_seq OWNER TO gedcf;
-
 --
--- Name: f_specifics_f_specifics_id_seq; Type: SEQUENCE OWNED BY; Schema: mover; Owner: gedcf
+-- Name: f_specifics_f_specifics_id_seq; Type: SEQUENCE OWNED BY; Schema: mover; Owner: -
 --
 
 ALTER SEQUENCE mover.f_specifics_f_specifics_id_seq OWNED BY mover.f_specifics.f_specifics_id;
 
 
 --
--- Name: lp_table; Type: TABLE; Schema: mover; Owner: gedcf
+-- Name: lp_table; Type: TABLE; Schema: mover; Owner: -
 --
 
 CREATE TABLE mover.lp_table (
@@ -605,10 +543,8 @@ CREATE TABLE mover.lp_table (
 );
 
 
-ALTER TABLE mover.lp_table OWNER TO gedcf;
-
 --
--- Name: reference_table; Type: TABLE; Schema: mover; Owner: gedcf
+-- Name: reference_table; Type: TABLE; Schema: mover; Owner: -
 --
 
 CREATE TABLE mover.reference_table (
@@ -619,52 +555,50 @@ CREATE TABLE mover.reference_table (
 );
 
 
-ALTER TABLE mover.reference_table OWNER TO gedcf;
-
 --
--- Name: damage_scale id; Type: DEFAULT; Schema: mover; Owner: gedcf
+-- Name: damage_scale id; Type: DEFAULT; Schema: mover; Owner: -
 --
 
 ALTER TABLE ONLY mover.damage_scale ALTER COLUMN id SET DEFAULT nextval('mover.damage_scale_id_seq'::regclass);
 
 
 --
--- Name: f_additional f_additional_id; Type: DEFAULT; Schema: mover; Owner: gedcf
+-- Name: f_additional f_additional_id; Type: DEFAULT; Schema: mover; Owner: -
 --
 
 ALTER TABLE ONLY mover.f_additional ALTER COLUMN f_additional_id SET DEFAULT nextval('mover.f_additional_f_additional_id_seq'::regclass);
 
 
 --
--- Name: f_core id; Type: DEFAULT; Schema: mover; Owner: gedcf
+-- Name: f_core id; Type: DEFAULT; Schema: mover; Owner: -
 --
 
 ALTER TABLE ONLY mover.f_core ALTER COLUMN id SET DEFAULT nextval('mover.f_core_id_seq'::regclass);
 
 
 --
--- Name: f_scoring id; Type: DEFAULT; Schema: mover; Owner: gedcf
+-- Name: f_scoring id; Type: DEFAULT; Schema: mover; Owner: -
 --
 
 ALTER TABLE ONLY mover.f_scoring ALTER COLUMN id SET DEFAULT nextval('mover.f_scoring_id_seq'::regclass);
 
 
 --
--- Name: f_scoring f_core_id; Type: DEFAULT; Schema: mover; Owner: gedcf
+-- Name: f_scoring f_core_id; Type: DEFAULT; Schema: mover; Owner: -
 --
 
 ALTER TABLE ONLY mover.f_scoring ALTER COLUMN f_core_id SET DEFAULT nextval('mover.f_scoring_f_core_id_seq'::regclass);
 
 
 --
--- Name: f_specifics f_specifics_id; Type: DEFAULT; Schema: mover; Owner: gedcf
+-- Name: f_specifics f_specifics_id; Type: DEFAULT; Schema: mover; Owner: -
 --
 
 ALTER TABLE ONLY mover.f_specifics ALTER COLUMN f_specifics_id SET DEFAULT nextval('mover.f_specifics_f_specifics_id_seq'::regclass);
 
 
 --
--- Name: reference_table author_year_pk; Type: CONSTRAINT; Schema: mover; Owner: gedcf
+-- Name: reference_table author_year_pk; Type: CONSTRAINT; Schema: mover; Owner: -
 --
 
 ALTER TABLE ONLY mover.reference_table
@@ -672,7 +606,7 @@ ALTER TABLE ONLY mover.reference_table
 
 
 --
--- Name: damage_scale damage_scale_damage_scale_code_key; Type: CONSTRAINT; Schema: mover; Owner: gedcf
+-- Name: damage_scale damage_scale_damage_scale_code_key; Type: CONSTRAINT; Schema: mover; Owner: -
 --
 
 ALTER TABLE ONLY mover.damage_scale
@@ -680,7 +614,7 @@ ALTER TABLE ONLY mover.damage_scale
 
 
 --
--- Name: damage_scale damage_scale_pkey; Type: CONSTRAINT; Schema: mover; Owner: gedcf
+-- Name: damage_scale damage_scale_pkey; Type: CONSTRAINT; Schema: mover; Owner: -
 --
 
 ALTER TABLE ONLY mover.damage_scale
@@ -688,7 +622,7 @@ ALTER TABLE ONLY mover.damage_scale
 
 
 --
--- Name: edp_table edp_table_edp_name_key; Type: CONSTRAINT; Schema: mover; Owner: gedcf
+-- Name: edp_table edp_table_edp_name_key; Type: CONSTRAINT; Schema: mover; Owner: -
 --
 
 ALTER TABLE ONLY mover.edp_table
@@ -696,7 +630,7 @@ ALTER TABLE ONLY mover.edp_table
 
 
 --
--- Name: edp_table edp_table_pkey; Type: CONSTRAINT; Schema: mover; Owner: gedcf
+-- Name: edp_table edp_table_pkey; Type: CONSTRAINT; Schema: mover; Owner: -
 --
 
 ALTER TABLE ONLY mover.edp_table
@@ -704,7 +638,7 @@ ALTER TABLE ONLY mover.edp_table
 
 
 --
--- Name: f_additional f_additional_pkey; Type: CONSTRAINT; Schema: mover; Owner: gedcf
+-- Name: f_additional f_additional_pkey; Type: CONSTRAINT; Schema: mover; Owner: -
 --
 
 ALTER TABLE ONLY mover.f_additional
@@ -712,7 +646,7 @@ ALTER TABLE ONLY mover.f_additional
 
 
 --
--- Name: f_core f_core_pkey; Type: CONSTRAINT; Schema: mover; Owner: gedcf
+-- Name: f_core f_core_pkey; Type: CONSTRAINT; Schema: mover; Owner: -
 --
 
 ALTER TABLE ONLY mover.f_core
@@ -720,7 +654,7 @@ ALTER TABLE ONLY mover.f_core
 
 
 --
--- Name: f_scoring f_scoring_pkey; Type: CONSTRAINT; Schema: mover; Owner: gedcf
+-- Name: f_scoring f_scoring_pkey; Type: CONSTRAINT; Schema: mover; Owner: -
 --
 
 ALTER TABLE ONLY mover.f_scoring
@@ -728,7 +662,7 @@ ALTER TABLE ONLY mover.f_scoring
 
 
 --
--- Name: f_specifics f_specifics_pkey; Type: CONSTRAINT; Schema: mover; Owner: gedcf
+-- Name: f_specifics f_specifics_pkey; Type: CONSTRAINT; Schema: mover; Owner: -
 --
 
 ALTER TABLE ONLY mover.f_specifics
@@ -736,7 +670,7 @@ ALTER TABLE ONLY mover.f_specifics
 
 
 --
--- Name: lp_table lp_table_lp_name_key; Type: CONSTRAINT; Schema: mover; Owner: gedcf
+-- Name: lp_table lp_table_lp_name_key; Type: CONSTRAINT; Schema: mover; Owner: -
 --
 
 ALTER TABLE ONLY mover.lp_table
@@ -744,7 +678,7 @@ ALTER TABLE ONLY mover.lp_table
 
 
 --
--- Name: lp_table lp_table_pkey; Type: CONSTRAINT; Schema: mover; Owner: gedcf
+-- Name: lp_table lp_table_pkey; Type: CONSTRAINT; Schema: mover; Owner: -
 --
 
 ALTER TABLE ONLY mover.lp_table
@@ -752,7 +686,7 @@ ALTER TABLE ONLY mover.lp_table
 
 
 --
--- Name: f_core bespoke_model_ref; Type: FK CONSTRAINT; Schema: mover; Owner: gedcf
+-- Name: f_core bespoke_model_ref; Type: FK CONSTRAINT; Schema: mover; Owner: -
 --
 
 ALTER TABLE ONLY mover.f_core
@@ -760,7 +694,7 @@ ALTER TABLE ONLY mover.f_core
 
 
 --
--- Name: damage_scale damage_scale_hazard_type_fkey; Type: FK CONSTRAINT; Schema: mover; Owner: gedcf
+-- Name: damage_scale damage_scale_hazard_type_fkey; Type: FK CONSTRAINT; Schema: mover; Owner: -
 --
 
 ALTER TABLE ONLY mover.damage_scale
@@ -768,7 +702,7 @@ ALTER TABLE ONLY mover.damage_scale
 
 
 --
--- Name: damage_scale damage_scale_process_type_fkey; Type: FK CONSTRAINT; Schema: mover; Owner: gedcf
+-- Name: damage_scale damage_scale_process_type_fkey; Type: FK CONSTRAINT; Schema: mover; Owner: -
 --
 
 ALTER TABLE ONLY mover.damage_scale
@@ -776,7 +710,7 @@ ALTER TABLE ONLY mover.damage_scale
 
 
 --
--- Name: f_specifics dm_scale_fkey; Type: FK CONSTRAINT; Schema: mover; Owner: gedcf
+-- Name: f_specifics dm_scale_fkey; Type: FK CONSTRAINT; Schema: mover; Owner: -
 --
 
 ALTER TABLE ONLY mover.f_specifics
@@ -784,7 +718,7 @@ ALTER TABLE ONLY mover.f_specifics
 
 
 --
--- Name: f_specifics edp_fkey; Type: FK CONSTRAINT; Schema: mover; Owner: gedcf
+-- Name: f_specifics edp_fkey; Type: FK CONSTRAINT; Schema: mover; Owner: -
 --
 
 ALTER TABLE ONLY mover.f_specifics
@@ -792,7 +726,7 @@ ALTER TABLE ONLY mover.f_specifics
 
 
 --
--- Name: f_specifics f_core_fkey; Type: FK CONSTRAINT; Schema: mover; Owner: gedcf
+-- Name: f_specifics f_core_fkey; Type: FK CONSTRAINT; Schema: mover; Owner: -
 --
 
 ALTER TABLE ONLY mover.f_specifics
@@ -800,7 +734,7 @@ ALTER TABLE ONLY mover.f_specifics
 
 
 --
--- Name: f_core f_ref; Type: FK CONSTRAINT; Schema: mover; Owner: gedcf
+-- Name: f_core f_ref; Type: FK CONSTRAINT; Schema: mover; Owner: -
 --
 
 ALTER TABLE ONLY mover.f_core
@@ -808,7 +742,7 @@ ALTER TABLE ONLY mover.f_core
 
 
 --
--- Name: f_scoring f_scoring_f_core_id_fkey; Type: FK CONSTRAINT; Schema: mover; Owner: gedcf
+-- Name: f_scoring f_scoring_f_core_id_fkey; Type: FK CONSTRAINT; Schema: mover; Owner: -
 --
 
 ALTER TABLE ONLY mover.f_scoring
@@ -816,7 +750,7 @@ ALTER TABLE ONLY mover.f_scoring
 
 
 --
--- Name: f_additional f_specifics_ref; Type: FK CONSTRAINT; Schema: mover; Owner: gedcf
+-- Name: f_additional f_specifics_ref; Type: FK CONSTRAINT; Schema: mover; Owner: -
 --
 
 ALTER TABLE ONLY mover.f_additional
@@ -824,7 +758,7 @@ ALTER TABLE ONLY mover.f_additional
 
 
 --
--- Name: f_core hazard_typep_ref; Type: FK CONSTRAINT; Schema: mover; Owner: gedcf
+-- Name: f_core hazard_typep_ref; Type: FK CONSTRAINT; Schema: mover; Owner: -
 --
 
 ALTER TABLE ONLY mover.f_core
@@ -832,7 +766,7 @@ ALTER TABLE ONLY mover.f_core
 
 
 --
--- Name: f_core hazard_types_ref; Type: FK CONSTRAINT; Schema: mover; Owner: gedcf
+-- Name: f_core hazard_types_ref; Type: FK CONSTRAINT; Schema: mover; Owner: -
 --
 
 ALTER TABLE ONLY mover.f_core
@@ -840,7 +774,7 @@ ALTER TABLE ONLY mover.f_core
 
 
 --
--- Name: f_specifics im_data_source_ref; Type: FK CONSTRAINT; Schema: mover; Owner: gedcf
+-- Name: f_specifics im_data_source_ref; Type: FK CONSTRAINT; Schema: mover; Owner: -
 --
 
 ALTER TABLE ONLY mover.f_specifics
@@ -848,7 +782,7 @@ ALTER TABLE ONLY mover.f_specifics
 
 
 --
--- Name: f_specifics im_fkey; Type: FK CONSTRAINT; Schema: mover; Owner: gedcf
+-- Name: f_specifics im_fkey; Type: FK CONSTRAINT; Schema: mover; Owner: -
 --
 
 ALTER TABLE ONLY mover.f_specifics
@@ -856,7 +790,7 @@ ALTER TABLE ONLY mover.f_specifics
 
 
 --
--- Name: f_specifics impe_ref; Type: FK CONSTRAINT; Schema: mover; Owner: gedcf
+-- Name: f_specifics impe_ref; Type: FK CONSTRAINT; Schema: mover; Owner: -
 --
 
 ALTER TABLE ONLY mover.f_specifics
@@ -864,7 +798,7 @@ ALTER TABLE ONLY mover.f_specifics
 
 
 --
--- Name: f_core licence_fkey; Type: FK CONSTRAINT; Schema: mover; Owner: gedcf
+-- Name: f_core licence_fkey; Type: FK CONSTRAINT; Schema: mover; Owner: -
 --
 
 ALTER TABLE ONLY mover.f_core
@@ -872,7 +806,7 @@ ALTER TABLE ONLY mover.f_core
 
 
 --
--- Name: f_core licence_ref; Type: FK CONSTRAINT; Schema: mover; Owner: gedcf
+-- Name: f_core licence_ref; Type: FK CONSTRAINT; Schema: mover; Owner: -
 --
 
 ALTER TABLE ONLY mover.f_core
@@ -880,7 +814,7 @@ ALTER TABLE ONLY mover.f_core
 
 
 --
--- Name: f_specifics lp_fkey; Type: FK CONSTRAINT; Schema: mover; Owner: gedcf
+-- Name: f_specifics lp_fkey; Type: FK CONSTRAINT; Schema: mover; Owner: -
 --
 
 ALTER TABLE ONLY mover.f_specifics
@@ -888,7 +822,7 @@ ALTER TABLE ONLY mover.f_specifics
 
 
 --
--- Name: f_core process_typep_ref; Type: FK CONSTRAINT; Schema: mover; Owner: gedcf
+-- Name: f_core process_typep_ref; Type: FK CONSTRAINT; Schema: mover; Owner: -
 --
 
 ALTER TABLE ONLY mover.f_core
@@ -896,7 +830,7 @@ ALTER TABLE ONLY mover.f_core
 
 
 --
--- Name: f_core process_types_ref; Type: FK CONSTRAINT; Schema: mover; Owner: gedcf
+-- Name: f_core process_types_ref; Type: FK CONSTRAINT; Schema: mover; Owner: -
 --
 
 ALTER TABLE ONLY mover.f_core
@@ -904,7 +838,7 @@ ALTER TABLE ONLY mover.f_core
 
 
 --
--- Name: f_additional valstudy_ref; Type: FK CONSTRAINT; Schema: mover; Owner: gedcf
+-- Name: f_additional valstudy_ref; Type: FK CONSTRAINT; Schema: mover; Owner: -
 --
 
 ALTER TABLE ONLY mover.f_additional

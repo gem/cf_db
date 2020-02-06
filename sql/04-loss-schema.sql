@@ -17,23 +17,21 @@ SET client_min_messages = warning;
 SET row_security = off;
 
 --
--- Name: loss; Type: SCHEMA; Schema: -; Owner: losscontrib
+-- Name: loss; Type: SCHEMA; Schema: -; Owner: -
 --
 
 CREATE SCHEMA loss;
 
 
-ALTER SCHEMA loss OWNER TO losscontrib;
-
 --
--- Name: SCHEMA loss; Type: COMMENT; Schema: -; Owner: losscontrib
+-- Name: SCHEMA loss; Type: COMMENT; Schema: -; Owner: -
 --
 
 COMMENT ON SCHEMA loss IS 'Schema for Challenge Fund loss database elements';
 
 
 --
--- Name: component_enum; Type: TYPE; Schema: loss; Owner: gedcf
+-- Name: component_enum; Type: TYPE; Schema: loss; Owner: -
 --
 
 CREATE TYPE loss.component_enum AS ENUM (
@@ -44,17 +42,15 @@ CREATE TYPE loss.component_enum AS ENUM (
 );
 
 
-ALTER TYPE loss.component_enum OWNER TO gedcf;
-
 --
--- Name: TYPE component_enum; Type: COMMENT; Schema: loss; Owner: gedcf
+-- Name: TYPE component_enum; Type: COMMENT; Schema: loss; Owner: -
 --
 
 COMMENT ON TYPE loss.component_enum IS 'Types of loss component';
 
 
 --
--- Name: frequency_enum; Type: TYPE; Schema: loss; Owner: gedcf
+-- Name: frequency_enum; Type: TYPE; Schema: loss; Owner: -
 --
 
 CREATE TYPE loss.frequency_enum AS ENUM (
@@ -64,17 +60,15 @@ CREATE TYPE loss.frequency_enum AS ENUM (
 );
 
 
-ALTER TYPE loss.frequency_enum OWNER TO gedcf;
-
 --
--- Name: TYPE frequency_enum; Type: COMMENT; Schema: loss; Owner: gedcf
+-- Name: TYPE frequency_enum; Type: COMMENT; Schema: loss; Owner: -
 --
 
 COMMENT ON TYPE loss.frequency_enum IS 'Types of loss frequency';
 
 
 --
--- Name: loss_type_enum; Type: TYPE; Schema: loss; Owner: gedcf
+-- Name: loss_type_enum; Type: TYPE; Schema: loss; Owner: -
 --
 
 CREATE TYPE loss.loss_type_enum AS ENUM (
@@ -83,17 +77,15 @@ CREATE TYPE loss.loss_type_enum AS ENUM (
 );
 
 
-ALTER TYPE loss.loss_type_enum OWNER TO gedcf;
-
 --
--- Name: TYPE loss_type_enum; Type: COMMENT; Schema: loss; Owner: gedcf
+-- Name: TYPE loss_type_enum; Type: COMMENT; Schema: loss; Owner: -
 --
 
 COMMENT ON TYPE loss.loss_type_enum IS 'Types of loss';
 
 
 --
--- Name: metric_enum; Type: TYPE; Schema: loss; Owner: gedcf
+-- Name: metric_enum; Type: TYPE; Schema: loss; Owner: -
 --
 
 CREATE TYPE loss.metric_enum AS ENUM (
@@ -103,10 +95,8 @@ CREATE TYPE loss.metric_enum AS ENUM (
 );
 
 
-ALTER TYPE loss.metric_enum OWNER TO gedcf;
-
 --
--- Name: TYPE metric_enum; Type: COMMENT; Schema: loss; Owner: gedcf
+-- Name: TYPE metric_enum; Type: COMMENT; Schema: loss; Owner: -
 --
 
 COMMENT ON TYPE loss.metric_enum IS 'Types of loss metric';
@@ -117,7 +107,7 @@ SET default_tablespace = '';
 SET default_with_oids = false;
 
 --
--- Name: loss_map; Type: TABLE; Schema: loss; Owner: gedcf
+-- Name: loss_map; Type: TABLE; Schema: loss; Owner: -
 --
 
 CREATE TABLE loss.loss_map (
@@ -133,17 +123,15 @@ CREATE TABLE loss.loss_map (
 );
 
 
-ALTER TABLE loss.loss_map OWNER TO gedcf;
-
 --
--- Name: TABLE loss_map; Type: COMMENT; Schema: loss; Owner: gedcf
+-- Name: TABLE loss_map; Type: COMMENT; Schema: loss; Owner: -
 --
 
 COMMENT ON TABLE loss.loss_map IS 'Meta-data for a single loss map for a given loss model';
 
 
 --
--- Name: loss_map_values; Type: TABLE; Schema: loss; Owner: gedcf
+-- Name: loss_map_values; Type: TABLE; Schema: loss; Owner: -
 --
 
 CREATE TABLE loss.loss_map_values (
@@ -155,17 +143,15 @@ CREATE TABLE loss.loss_map_values (
 );
 
 
-ALTER TABLE loss.loss_map_values OWNER TO gedcf;
-
 --
--- Name: TABLE loss_map_values; Type: COMMENT; Schema: loss; Owner: gedcf
+-- Name: TABLE loss_map_values; Type: COMMENT; Schema: loss; Owner: -
 --
 
 COMMENT ON TABLE loss.loss_map_values IS 'Loss values for the specified loss map';
 
 
 --
--- Name: loss_model; Type: TABLE; Schema: loss; Owner: gedcf
+-- Name: loss_model; Type: TABLE; Schema: loss; Owner: -
 --
 
 CREATE TABLE loss.loss_model (
@@ -180,17 +166,15 @@ CREATE TABLE loss.loss_model (
 );
 
 
-ALTER TABLE loss.loss_model OWNER TO gedcf;
-
 --
--- Name: TABLE loss_model; Type: COMMENT; Schema: loss; Owner: gedcf
+-- Name: TABLE loss_model; Type: COMMENT; Schema: loss; Owner: -
 --
 
 COMMENT ON TABLE loss.loss_model IS 'Loss model meta-data and optional links to hazard, exposure and vulnerability models';
 
 
 --
--- Name: all_loss_map_values; Type: VIEW; Schema: loss; Owner: gedcf
+-- Name: all_loss_map_values; Type: VIEW; Schema: loss; Owner: -
 --
 
 CREATE VIEW loss.all_loss_map_values AS
@@ -214,10 +198,8 @@ CREATE VIEW loss.all_loss_map_values AS
   ORDER BY lmv.id;
 
 
-ALTER TABLE loss.all_loss_map_values OWNER TO gedcf;
-
 --
--- Name: contribution; Type: TABLE; Schema: loss; Owner: gedcf
+-- Name: contribution; Type: TABLE; Schema: loss; Owner: -
 --
 
 CREATE TABLE loss.contribution (
@@ -234,17 +216,15 @@ CREATE TABLE loss.contribution (
 );
 
 
-ALTER TABLE loss.contribution OWNER TO gedcf;
-
 --
--- Name: TABLE contribution; Type: COMMENT; Schema: loss; Owner: gedcf
+-- Name: TABLE contribution; Type: COMMENT; Schema: loss; Owner: -
 --
 
 COMMENT ON TABLE loss.contribution IS 'Meta-data for contributed model, license, source etc.';
 
 
 --
--- Name: contribution_id_seq; Type: SEQUENCE; Schema: loss; Owner: gedcf
+-- Name: contribution_id_seq; Type: SEQUENCE; Schema: loss; Owner: -
 --
 
 CREATE SEQUENCE loss.contribution_id_seq
@@ -256,17 +236,15 @@ CREATE SEQUENCE loss.contribution_id_seq
     CACHE 1;
 
 
-ALTER TABLE loss.contribution_id_seq OWNER TO gedcf;
-
 --
--- Name: contribution_id_seq; Type: SEQUENCE OWNED BY; Schema: loss; Owner: gedcf
+-- Name: contribution_id_seq; Type: SEQUENCE OWNED BY; Schema: loss; Owner: -
 --
 
 ALTER SEQUENCE loss.contribution_id_seq OWNED BY loss.contribution.id;
 
 
 --
--- Name: loss_curve_map; Type: TABLE; Schema: loss; Owner: gedcf
+-- Name: loss_curve_map; Type: TABLE; Schema: loss; Owner: -
 --
 
 CREATE TABLE loss.loss_curve_map (
@@ -281,17 +259,15 @@ CREATE TABLE loss.loss_curve_map (
 );
 
 
-ALTER TABLE loss.loss_curve_map OWNER TO gedcf;
-
 --
--- Name: TABLE loss_curve_map; Type: COMMENT; Schema: loss; Owner: gedcf
+-- Name: TABLE loss_curve_map; Type: COMMENT; Schema: loss; Owner: -
 --
 
 COMMENT ON TABLE loss.loss_curve_map IS 'Meta-data for a map of (PML) loss curves for a given loss model';
 
 
 --
--- Name: loss_curve_map_id_seq; Type: SEQUENCE; Schema: loss; Owner: gedcf
+-- Name: loss_curve_map_id_seq; Type: SEQUENCE; Schema: loss; Owner: -
 --
 
 CREATE SEQUENCE loss.loss_curve_map_id_seq
@@ -303,17 +279,15 @@ CREATE SEQUENCE loss.loss_curve_map_id_seq
     CACHE 1;
 
 
-ALTER TABLE loss.loss_curve_map_id_seq OWNER TO gedcf;
-
 --
--- Name: loss_curve_map_id_seq; Type: SEQUENCE OWNED BY; Schema: loss; Owner: gedcf
+-- Name: loss_curve_map_id_seq; Type: SEQUENCE OWNED BY; Schema: loss; Owner: -
 --
 
 ALTER SEQUENCE loss.loss_curve_map_id_seq OWNED BY loss.loss_curve_map.id;
 
 
 --
--- Name: loss_curve_map_values; Type: TABLE; Schema: loss; Owner: gedcf
+-- Name: loss_curve_map_values; Type: TABLE; Schema: loss; Owner: -
 --
 
 CREATE TABLE loss.loss_curve_map_values (
@@ -327,17 +301,15 @@ CREATE TABLE loss.loss_curve_map_values (
 );
 
 
-ALTER TABLE loss.loss_curve_map_values OWNER TO gedcf;
-
 --
--- Name: TABLE loss_curve_map_values; Type: COMMENT; Schema: loss; Owner: gedcf
+-- Name: TABLE loss_curve_map_values; Type: COMMENT; Schema: loss; Owner: -
 --
 
 COMMENT ON TABLE loss.loss_curve_map_values IS 'Loss curve values for the specified loss curve map';
 
 
 --
--- Name: loss_curve_map_values_id_seq; Type: SEQUENCE; Schema: loss; Owner: gedcf
+-- Name: loss_curve_map_values_id_seq; Type: SEQUENCE; Schema: loss; Owner: -
 --
 
 CREATE SEQUENCE loss.loss_curve_map_values_id_seq
@@ -348,17 +320,15 @@ CREATE SEQUENCE loss.loss_curve_map_values_id_seq
     CACHE 1;
 
 
-ALTER TABLE loss.loss_curve_map_values_id_seq OWNER TO gedcf;
-
 --
--- Name: loss_curve_map_values_id_seq; Type: SEQUENCE OWNED BY; Schema: loss; Owner: gedcf
+-- Name: loss_curve_map_values_id_seq; Type: SEQUENCE OWNED BY; Schema: loss; Owner: -
 --
 
 ALTER SEQUENCE loss.loss_curve_map_values_id_seq OWNED BY loss.loss_curve_map_values.id;
 
 
 --
--- Name: loss_map_id_seq; Type: SEQUENCE; Schema: loss; Owner: gedcf
+-- Name: loss_map_id_seq; Type: SEQUENCE; Schema: loss; Owner: -
 --
 
 CREATE SEQUENCE loss.loss_map_id_seq
@@ -370,17 +340,15 @@ CREATE SEQUENCE loss.loss_map_id_seq
     CACHE 1;
 
 
-ALTER TABLE loss.loss_map_id_seq OWNER TO gedcf;
-
 --
--- Name: loss_map_id_seq; Type: SEQUENCE OWNED BY; Schema: loss; Owner: gedcf
+-- Name: loss_map_id_seq; Type: SEQUENCE OWNED BY; Schema: loss; Owner: -
 --
 
 ALTER SEQUENCE loss.loss_map_id_seq OWNED BY loss.loss_map.id;
 
 
 --
--- Name: loss_map_values_id_seq; Type: SEQUENCE; Schema: loss; Owner: gedcf
+-- Name: loss_map_values_id_seq; Type: SEQUENCE; Schema: loss; Owner: -
 --
 
 CREATE SEQUENCE loss.loss_map_values_id_seq
@@ -391,17 +359,15 @@ CREATE SEQUENCE loss.loss_map_values_id_seq
     CACHE 1;
 
 
-ALTER TABLE loss.loss_map_values_id_seq OWNER TO gedcf;
-
 --
--- Name: loss_map_values_id_seq; Type: SEQUENCE OWNED BY; Schema: loss; Owner: gedcf
+-- Name: loss_map_values_id_seq; Type: SEQUENCE OWNED BY; Schema: loss; Owner: -
 --
 
 ALTER SEQUENCE loss.loss_map_values_id_seq OWNED BY loss.loss_map_values.id;
 
 
 --
--- Name: loss_model_id_seq; Type: SEQUENCE; Schema: loss; Owner: gedcf
+-- Name: loss_model_id_seq; Type: SEQUENCE; Schema: loss; Owner: -
 --
 
 CREATE SEQUENCE loss.loss_model_id_seq
@@ -413,59 +379,57 @@ CREATE SEQUENCE loss.loss_model_id_seq
     CACHE 1;
 
 
-ALTER TABLE loss.loss_model_id_seq OWNER TO gedcf;
-
 --
--- Name: loss_model_id_seq; Type: SEQUENCE OWNED BY; Schema: loss; Owner: gedcf
+-- Name: loss_model_id_seq; Type: SEQUENCE OWNED BY; Schema: loss; Owner: -
 --
 
 ALTER SEQUENCE loss.loss_model_id_seq OWNED BY loss.loss_model.id;
 
 
 --
--- Name: contribution id; Type: DEFAULT; Schema: loss; Owner: gedcf
+-- Name: contribution id; Type: DEFAULT; Schema: loss; Owner: -
 --
 
 ALTER TABLE ONLY loss.contribution ALTER COLUMN id SET DEFAULT nextval('loss.contribution_id_seq'::regclass);
 
 
 --
--- Name: loss_curve_map id; Type: DEFAULT; Schema: loss; Owner: gedcf
+-- Name: loss_curve_map id; Type: DEFAULT; Schema: loss; Owner: -
 --
 
 ALTER TABLE ONLY loss.loss_curve_map ALTER COLUMN id SET DEFAULT nextval('loss.loss_curve_map_id_seq'::regclass);
 
 
 --
--- Name: loss_curve_map_values id; Type: DEFAULT; Schema: loss; Owner: gedcf
+-- Name: loss_curve_map_values id; Type: DEFAULT; Schema: loss; Owner: -
 --
 
 ALTER TABLE ONLY loss.loss_curve_map_values ALTER COLUMN id SET DEFAULT nextval('loss.loss_curve_map_values_id_seq'::regclass);
 
 
 --
--- Name: loss_map id; Type: DEFAULT; Schema: loss; Owner: gedcf
+-- Name: loss_map id; Type: DEFAULT; Schema: loss; Owner: -
 --
 
 ALTER TABLE ONLY loss.loss_map ALTER COLUMN id SET DEFAULT nextval('loss.loss_map_id_seq'::regclass);
 
 
 --
--- Name: loss_map_values id; Type: DEFAULT; Schema: loss; Owner: gedcf
+-- Name: loss_map_values id; Type: DEFAULT; Schema: loss; Owner: -
 --
 
 ALTER TABLE ONLY loss.loss_map_values ALTER COLUMN id SET DEFAULT nextval('loss.loss_map_values_id_seq'::regclass);
 
 
 --
--- Name: loss_model id; Type: DEFAULT; Schema: loss; Owner: gedcf
+-- Name: loss_model id; Type: DEFAULT; Schema: loss; Owner: -
 --
 
 ALTER TABLE ONLY loss.loss_model ALTER COLUMN id SET DEFAULT nextval('loss.loss_model_id_seq'::regclass);
 
 
 --
--- Name: contribution contribution_pkey; Type: CONSTRAINT; Schema: loss; Owner: gedcf
+-- Name: contribution contribution_pkey; Type: CONSTRAINT; Schema: loss; Owner: -
 --
 
 ALTER TABLE ONLY loss.contribution
@@ -473,7 +437,7 @@ ALTER TABLE ONLY loss.contribution
 
 
 --
--- Name: loss_curve_map loss_curve_map_pkey; Type: CONSTRAINT; Schema: loss; Owner: gedcf
+-- Name: loss_curve_map loss_curve_map_pkey; Type: CONSTRAINT; Schema: loss; Owner: -
 --
 
 ALTER TABLE ONLY loss.loss_curve_map
@@ -481,7 +445,7 @@ ALTER TABLE ONLY loss.loss_curve_map
 
 
 --
--- Name: loss_curve_map_values loss_curve_map_values_pkey; Type: CONSTRAINT; Schema: loss; Owner: gedcf
+-- Name: loss_curve_map_values loss_curve_map_values_pkey; Type: CONSTRAINT; Schema: loss; Owner: -
 --
 
 ALTER TABLE ONLY loss.loss_curve_map_values
@@ -489,7 +453,7 @@ ALTER TABLE ONLY loss.loss_curve_map_values
 
 
 --
--- Name: loss_map loss_map_pkey; Type: CONSTRAINT; Schema: loss; Owner: gedcf
+-- Name: loss_map loss_map_pkey; Type: CONSTRAINT; Schema: loss; Owner: -
 --
 
 ALTER TABLE ONLY loss.loss_map
@@ -497,7 +461,7 @@ ALTER TABLE ONLY loss.loss_map
 
 
 --
--- Name: loss_map_values loss_map_values_pkey; Type: CONSTRAINT; Schema: loss; Owner: gedcf
+-- Name: loss_map_values loss_map_values_pkey; Type: CONSTRAINT; Schema: loss; Owner: -
 --
 
 ALTER TABLE ONLY loss.loss_map_values
@@ -505,7 +469,7 @@ ALTER TABLE ONLY loss.loss_map_values
 
 
 --
--- Name: loss_model loss_model_pkey; Type: CONSTRAINT; Schema: loss; Owner: gedcf
+-- Name: loss_model loss_model_pkey; Type: CONSTRAINT; Schema: loss; Owner: -
 --
 
 ALTER TABLE ONLY loss.loss_model
@@ -513,56 +477,56 @@ ALTER TABLE ONLY loss.loss_model
 
 
 --
--- Name: contribution_loss_model_id_idx; Type: INDEX; Schema: loss; Owner: gedcf
+-- Name: contribution_loss_model_id_idx; Type: INDEX; Schema: loss; Owner: -
 --
 
 CREATE INDEX contribution_loss_model_id_idx ON loss.contribution USING btree (loss_model_id);
 
 
 --
--- Name: loss_curve_map_loss_model_id_idx; Type: INDEX; Schema: loss; Owner: gedcf
+-- Name: loss_curve_map_loss_model_id_idx; Type: INDEX; Schema: loss; Owner: -
 --
 
 CREATE INDEX loss_curve_map_loss_model_id_idx ON loss.loss_curve_map USING btree (loss_model_id);
 
 
 --
--- Name: loss_curve_map_values_loss_curve_map_id_idx; Type: INDEX; Schema: loss; Owner: gedcf
+-- Name: loss_curve_map_values_loss_curve_map_id_idx; Type: INDEX; Schema: loss; Owner: -
 --
 
 CREATE INDEX loss_curve_map_values_loss_curve_map_id_idx ON loss.loss_curve_map_values USING btree (loss_curve_map_id);
 
 
 --
--- Name: loss_curve_map_values_the_geom_idx; Type: INDEX; Schema: loss; Owner: gedcf
+-- Name: loss_curve_map_values_the_geom_idx; Type: INDEX; Schema: loss; Owner: -
 --
 
 CREATE INDEX loss_curve_map_values_the_geom_idx ON loss.loss_curve_map_values USING gist (the_geom);
 
 
 --
--- Name: loss_map_loss_model_id_idx; Type: INDEX; Schema: loss; Owner: gedcf
+-- Name: loss_map_loss_model_id_idx; Type: INDEX; Schema: loss; Owner: -
 --
 
 CREATE INDEX loss_map_loss_model_id_idx ON loss.loss_map USING btree (loss_model_id);
 
 
 --
--- Name: loss_map_values_loss_map_id_idx; Type: INDEX; Schema: loss; Owner: gedcf
+-- Name: loss_map_values_loss_map_id_idx; Type: INDEX; Schema: loss; Owner: -
 --
 
 CREATE INDEX loss_map_values_loss_map_id_idx ON loss.loss_map_values USING btree (loss_map_id);
 
 
 --
--- Name: loss_map_values_the_geom_idx; Type: INDEX; Schema: loss; Owner: gedcf
+-- Name: loss_map_values_the_geom_idx; Type: INDEX; Schema: loss; Owner: -
 --
 
 CREATE INDEX loss_map_values_the_geom_idx ON loss.loss_map_values USING gist (the_geom);
 
 
 --
--- Name: contribution contribution_license_code_fkey; Type: FK CONSTRAINT; Schema: loss; Owner: gedcf
+-- Name: contribution contribution_license_code_fkey; Type: FK CONSTRAINT; Schema: loss; Owner: -
 --
 
 ALTER TABLE ONLY loss.contribution
@@ -570,7 +534,7 @@ ALTER TABLE ONLY loss.contribution
 
 
 --
--- Name: contribution contribution_loss_model_id_fkey; Type: FK CONSTRAINT; Schema: loss; Owner: gedcf
+-- Name: contribution contribution_loss_model_id_fkey; Type: FK CONSTRAINT; Schema: loss; Owner: -
 --
 
 ALTER TABLE ONLY loss.contribution
@@ -578,7 +542,7 @@ ALTER TABLE ONLY loss.contribution
 
 
 --
--- Name: loss_curve_map loss_curve_map_loss_model_id_fkey; Type: FK CONSTRAINT; Schema: loss; Owner: gedcf
+-- Name: loss_curve_map loss_curve_map_loss_model_id_fkey; Type: FK CONSTRAINT; Schema: loss; Owner: -
 --
 
 ALTER TABLE ONLY loss.loss_curve_map
@@ -586,7 +550,7 @@ ALTER TABLE ONLY loss.loss_curve_map
 
 
 --
--- Name: loss_curve_map_values loss_curve_map_values_loss_curve_map_id_fkey; Type: FK CONSTRAINT; Schema: loss; Owner: gedcf
+-- Name: loss_curve_map_values loss_curve_map_values_loss_curve_map_id_fkey; Type: FK CONSTRAINT; Schema: loss; Owner: -
 --
 
 ALTER TABLE ONLY loss.loss_curve_map_values
@@ -594,7 +558,7 @@ ALTER TABLE ONLY loss.loss_curve_map_values
 
 
 --
--- Name: loss_map loss_map_loss_model_id_fkey; Type: FK CONSTRAINT; Schema: loss; Owner: gedcf
+-- Name: loss_map loss_map_loss_model_id_fkey; Type: FK CONSTRAINT; Schema: loss; Owner: -
 --
 
 ALTER TABLE ONLY loss.loss_map
@@ -602,7 +566,7 @@ ALTER TABLE ONLY loss.loss_map
 
 
 --
--- Name: loss_map_values loss_map_values_loss_map_id_fkey; Type: FK CONSTRAINT; Schema: loss; Owner: gedcf
+-- Name: loss_map_values loss_map_values_loss_map_id_fkey; Type: FK CONSTRAINT; Schema: loss; Owner: -
 --
 
 ALTER TABLE ONLY loss.loss_map_values
@@ -610,7 +574,7 @@ ALTER TABLE ONLY loss.loss_map_values
 
 
 --
--- Name: loss_model loss_model_hazard_type_fkey; Type: FK CONSTRAINT; Schema: loss; Owner: gedcf
+-- Name: loss_model loss_model_hazard_type_fkey; Type: FK CONSTRAINT; Schema: loss; Owner: -
 --
 
 ALTER TABLE ONLY loss.loss_model
@@ -618,7 +582,7 @@ ALTER TABLE ONLY loss.loss_model
 
 
 --
--- Name: loss_model loss_model_process_type_fkey; Type: FK CONSTRAINT; Schema: loss; Owner: gedcf
+-- Name: loss_model loss_model_process_type_fkey; Type: FK CONSTRAINT; Schema: loss; Owner: -
 --
 
 ALTER TABLE ONLY loss.loss_model
@@ -626,14 +590,14 @@ ALTER TABLE ONLY loss.loss_model
 
 
 --
--- Name: SCHEMA loss; Type: ACL; Schema: -; Owner: losscontrib
+-- Name: SCHEMA loss; Type: ACL; Schema: -; Owner: -
 --
 
 GRANT USAGE ON SCHEMA loss TO lossusers;
 
 
 --
--- Name: TABLE loss_map; Type: ACL; Schema: loss; Owner: gedcf
+-- Name: TABLE loss_map; Type: ACL; Schema: loss; Owner: -
 --
 
 GRANT SELECT ON TABLE loss.loss_map TO lossusers;
@@ -641,7 +605,7 @@ GRANT ALL ON TABLE loss.loss_map TO losscontrib;
 
 
 --
--- Name: TABLE loss_map_values; Type: ACL; Schema: loss; Owner: gedcf
+-- Name: TABLE loss_map_values; Type: ACL; Schema: loss; Owner: -
 --
 
 GRANT SELECT ON TABLE loss.loss_map_values TO lossusers;
@@ -649,7 +613,7 @@ GRANT ALL ON TABLE loss.loss_map_values TO losscontrib;
 
 
 --
--- Name: TABLE loss_model; Type: ACL; Schema: loss; Owner: gedcf
+-- Name: TABLE loss_model; Type: ACL; Schema: loss; Owner: -
 --
 
 GRANT SELECT ON TABLE loss.loss_model TO lossusers;
@@ -657,7 +621,7 @@ GRANT ALL ON TABLE loss.loss_model TO losscontrib;
 
 
 --
--- Name: TABLE all_loss_map_values; Type: ACL; Schema: loss; Owner: gedcf
+-- Name: TABLE all_loss_map_values; Type: ACL; Schema: loss; Owner: -
 --
 
 GRANT SELECT ON TABLE loss.all_loss_map_values TO lossusers;
@@ -665,7 +629,7 @@ GRANT ALL ON TABLE loss.all_loss_map_values TO losscontrib;
 
 
 --
--- Name: TABLE contribution; Type: ACL; Schema: loss; Owner: gedcf
+-- Name: TABLE contribution; Type: ACL; Schema: loss; Owner: -
 --
 
 GRANT SELECT ON TABLE loss.contribution TO lossusers;
@@ -673,14 +637,14 @@ GRANT ALL ON TABLE loss.contribution TO losscontrib;
 
 
 --
--- Name: SEQUENCE contribution_id_seq; Type: ACL; Schema: loss; Owner: gedcf
+-- Name: SEQUENCE contribution_id_seq; Type: ACL; Schema: loss; Owner: -
 --
 
 GRANT ALL ON SEQUENCE loss.contribution_id_seq TO losscontrib;
 
 
 --
--- Name: TABLE loss_curve_map; Type: ACL; Schema: loss; Owner: gedcf
+-- Name: TABLE loss_curve_map; Type: ACL; Schema: loss; Owner: -
 --
 
 GRANT SELECT ON TABLE loss.loss_curve_map TO lossusers;
@@ -688,14 +652,14 @@ GRANT ALL ON TABLE loss.loss_curve_map TO losscontrib;
 
 
 --
--- Name: SEQUENCE loss_curve_map_id_seq; Type: ACL; Schema: loss; Owner: gedcf
+-- Name: SEQUENCE loss_curve_map_id_seq; Type: ACL; Schema: loss; Owner: -
 --
 
 GRANT ALL ON SEQUENCE loss.loss_curve_map_id_seq TO losscontrib;
 
 
 --
--- Name: TABLE loss_curve_map_values; Type: ACL; Schema: loss; Owner: gedcf
+-- Name: TABLE loss_curve_map_values; Type: ACL; Schema: loss; Owner: -
 --
 
 GRANT SELECT ON TABLE loss.loss_curve_map_values TO lossusers;
@@ -703,28 +667,28 @@ GRANT ALL ON TABLE loss.loss_curve_map_values TO losscontrib;
 
 
 --
--- Name: SEQUENCE loss_curve_map_values_id_seq; Type: ACL; Schema: loss; Owner: gedcf
+-- Name: SEQUENCE loss_curve_map_values_id_seq; Type: ACL; Schema: loss; Owner: -
 --
 
 GRANT ALL ON SEQUENCE loss.loss_curve_map_values_id_seq TO losscontrib;
 
 
 --
--- Name: SEQUENCE loss_map_id_seq; Type: ACL; Schema: loss; Owner: gedcf
+-- Name: SEQUENCE loss_map_id_seq; Type: ACL; Schema: loss; Owner: -
 --
 
 GRANT ALL ON SEQUENCE loss.loss_map_id_seq TO losscontrib;
 
 
 --
--- Name: SEQUENCE loss_map_values_id_seq; Type: ACL; Schema: loss; Owner: gedcf
+-- Name: SEQUENCE loss_map_values_id_seq; Type: ACL; Schema: loss; Owner: -
 --
 
 GRANT ALL ON SEQUENCE loss.loss_map_values_id_seq TO losscontrib;
 
 
 --
--- Name: SEQUENCE loss_model_id_seq; Type: ACL; Schema: loss; Owner: gedcf
+-- Name: SEQUENCE loss_model_id_seq; Type: ACL; Schema: loss; Owner: -
 --
 
 GRANT ALL ON SEQUENCE loss.loss_model_id_seq TO losscontrib;

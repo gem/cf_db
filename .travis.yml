@@ -37,12 +37,12 @@ jobs:
      - sed -e 's/@DB_USER@/postgres/' db_settings.sh.template > db_settings.sh; 
      - cat db_settings.sh
      - createdb -w -p 5433 -h localhost cf
-     - psql -w  -p 5433  -h localhost cf -e "create extension postgis"
-     - psql -w  -p 5433  -h localhost cf -f create-users.sql
-     - psql -w  -p 5433  -h localhost cf -f 00-common-schema.sql
-     - psql -w  -p 5433  -h localhost cf -f 01-taxonomy2human.sql
-     - psql -w  -p 5433  -h localhost cf -f 02-hazard-schema.sql
-     - psql -w  -p 5433  -h localhost cf -f 03-ged4all-schema.sql
-     - psql -w  -p 5433  -h localhost cf -f 04-loss-schema.sql
-     - psql -w  -p 5433  -h localhost cf -f 05-mover-schema.sql
-     - psql -w  -p 5433  -h localhost cf -f 06-permisions.sql
+     - psql -w  -p 5433  -h localhost -d cf -c "create extension postgis;"
+     - psql -w  -p 5433  -h localhost -d cf -f create-users.sql
+     - psql -w  -p 5433  -h localhost -d cf -f 00-common-schema.sql
+     - echo "Ommitting - need plpython3u - psql -w  -p 5433  -h localhost -d cf -f 01-taxonomy2human.sql"
+     - psql -w  -p 5433  -h localhost -d cf -f 02-hazard-schema.sql
+     - psql -w  -p 5433  -h localhost -d cf -f 03-ged4all-schema.sql
+     - psql -w  -p 5433  -h localhost -d cf -f 04-loss-schema.sql
+     - psql -w  -p 5433  -h localhost -d cf -f 05-mover-schema.sql
+     - psql -w  -p 5433  -h localhost -d cf -f 06-permisions.sql
