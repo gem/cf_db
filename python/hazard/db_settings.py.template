@@ -1,0 +1,22 @@
+db_confs = {
+    'hazard_reader': {
+        'NAME': 'hazard',
+        'USER': '<username for export here>',
+        'PASSWORD': '<password here>',
+        'HOST': '<hostname>',
+        'PORT': 5432,
+        'OPTIONS': {
+            'sslmode': 'require',
+        }
+    },
+    'hazard_contrib': {
+        'NAME': 'hazard',
+        'USER': '<username for contributions here>',
+        'PASSWORD': '<password here>',
+        'HOST': '<hostname>',
+        'PORT': 5432,
+        'OPTIONS': {
+            'sslmode': 'require',
+        }
+    }
+}
