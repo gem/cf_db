@@ -27,7 +27,6 @@ jobs:
      - export PATH="/usr/lib/postgresql/11/bin:$PATH"
      - echo "\set ON_ERROR_STOP on" > ~/.psqlrc
      - sudo cat /etc/postgresql/11/main/postgresql.conf
-     - sudo echo "host    all             all             127.0.0.1/32            md5" >> /etc/postgresql/11/main/pg_hba.conf
      - sudo cat /etc/postgresql/11/main/pg_hba.conf
      - sudo cat /etc/postgresql/9.3/main/postgresql.conf
      - sudo cat /etc/postgresql/9.3/main/pg_hba.conf
