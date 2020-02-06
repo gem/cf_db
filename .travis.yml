@@ -31,7 +31,7 @@ jobs:
      - sudo cat /etc/postgresql/9.3/main/pg_hba.conf
      - sudo pg_ctlcluster 11 main restart
      - sudo pg_ctlcluster 11 main status
-     - sudo -u postgres psql -w -p 5433 -c 'CREATE ROLE travis SUPERUSER LOGIN CREATEDB;' 
+     - sudo psql -U postgres -w -p 5433 -c 'CREATE ROLE travis SUPERUSER LOGIN CREATEDB;' 
     script:
      - id
      - cd sql; 
