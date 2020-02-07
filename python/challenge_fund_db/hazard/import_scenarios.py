@@ -22,8 +22,8 @@
 Import a hazard scenario EventSet into the hazard scenario Database
 """
 import sys
-from cf_common import Contribution
-from database import db_connections
+from challenge_fund_db.common import Contribution
+from challenge_fund_db.common import db_connections
 import db_settings
 
 

@@ -27,7 +27,7 @@ import sys
 
 from openquake.hazardlib.nrml import read
 from openquake.commonlib import readinput
-from database import db_connections
+from challenge_fund_db.common import db_connections
 import db_settings
 
 VERBOSE = False

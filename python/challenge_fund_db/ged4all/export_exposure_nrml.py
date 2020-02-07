@@ -25,7 +25,7 @@ population grid.
 """
 import sys
 from xml.etree import ElementTree as etree
-from database import db_connections
+from challenge_fund_db.common import db_connections
 import db_settings
 
 VERBOSE = False

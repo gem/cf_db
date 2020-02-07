@@ -1,6 +1,8 @@
 # Python requirements for scripts
 # located in the 'python' folder
 # was openquake.engine==2.9.0
-#openquake.engine
+openquake.engine
 psycopg2
+pandas
+sqlalchemy
 #
