@@ -25,5 +25,6 @@ def main():
     engine = sqlalchemy.create_engine(args.db_url)
     export_to_json(engine, args.table, args.filename)
 
+
 if __name__ == '__main__':
     main()
