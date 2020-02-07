@@ -22,4 +22,4 @@
 from .base import Contribution
 from .database import db_connections
 
-__all__ = ['Contribution', 'db_connections'] 
+__all__ = ['Contribution', 'db_connections']
