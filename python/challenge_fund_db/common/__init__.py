@@ -1,3 +1,4 @@
+#!
 # -*- coding: utf-8 -*-
 # vim: tabstop=4 shiftwidth=4 softtabstop=4
 #
@@ -17,23 +18,8 @@
 # along with this program.
 # If not, see <https://www.gnu.org/licenses/agpl.html>.
 #
-import psycopg2
 
+from .base import Contribution
+from .database import db_connections
 
-def db_connections(db_confs):
-    conns = {}
-    for k in db_confs.keys():
-        db_conf = db_confs[k]
-        kwargs = {}
-        if 'OPTIONS' in db_conf:
-            if 'sslmode' in db_conf['OPTIONS']:
-                kwargs['sslmode'] = db_conf['OPTIONS']['sslmode']
-
-        conns[k] = psycopg2.connect(user=db_conf['USER'],
-                                    password=db_conf['PASSWORD'],
-                                    host=db_conf['HOST'],
-                                    port=db_conf['PORT'],
-                                    database=db_conf['NAME'],
-                                    **kwargs)
-
-    return conns
+__all__ = ['Contribution', 'db_connections'] 
