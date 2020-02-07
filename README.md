@@ -10,7 +10,7 @@ experimental.
 
 ### Pre-requisites
 Python code in this repository requires Python3 and is intended for use with
-PostgreSQL 11 and PostGIS 2.4.  
+PostgreSQL 11 and PostGIS 2.5.  
 
 If you also wish to use the optional taxonomy2human stored procedure then you 
 will also need to install support for plpython3u and install the 
