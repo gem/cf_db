@@ -3,4 +3,6 @@
 # was openquake.engine==2.9.0
 openquake.engine
 psycopg2
+pandas
+sqlalchemy
 #
