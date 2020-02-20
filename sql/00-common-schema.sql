@@ -202,6 +202,8 @@ FSS	CF	d_fss:m	Storm surge inundation depth	m
 DTA	DR	CMI:-	Crop Moisture Index	-
 DTM	DR	PDSI:-	Palmer Drought Severity Index	-
 DTM	DR	SPI:-	Standard Precipitation Index	-
+LSL	LS	LSI:-	-	Landslide susceptibility index
+LSL	LS	haz_lsl:-	-	Landslide hazard index
 \.
 
 
@@ -312,4 +314,3 @@ ALTER TABLE ONLY cf_common.process_type
 --
 -- PostgreSQL database dump complete
 --
-
